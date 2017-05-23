@@ -14,13 +14,15 @@ public class Filters {
 	
 	private Preference animals;
 	
-	private Preference party;
+	private Czestosc party;
+	
+	private Czestosc alkohol;
 	
 	private String district;
 
 	
 	public Filters(Plec plec, int minAge, int maxAge, double minRoomPrice, double maxRoomPrice, Preference smoking,
-			Preference animals, Preference party, String district) {
+			Preference animals, Czestosc party, Czestosc alkohol, String district) {
 		super();
 		this.plec = plec;
 		this.minAge = minAge;
@@ -30,6 +32,7 @@ public class Filters {
 		this.smoking = smoking;
 		this.animals = animals;
 		this.party = party;
+		this.alkohol = alkohol; 
 		this.district = district;
 	}
 	
@@ -41,7 +44,9 @@ public class Filters {
 		this.maxRoomPrice = 10000;
 		this.smoking = Preference.doesntMatter;
 		this.animals = Preference.doesntMatter;
-		this.party = Preference.doesntMatter;
+		this.party = null;
+		this.alkohol = null; 
+		this.district = null;
 	}
 
 	public Plec getPlec() {
@@ -100,11 +105,11 @@ public class Filters {
 		this.animals = animals;
 	}
 
-	public Preference getParty() {
+	public Czestosc getParty() {
 		return party;
 	}
 
-	public void setParty(Preference party) {
+	public void setParty(Czestosc party) {
 		this.party = party;
 	}
 
@@ -115,6 +120,15 @@ public class Filters {
 	public void setDistrict(String district) {
 		this.district = district;
 	}
+
+	public Czestosc getAlkohol() {
+		return alkohol;
+	}
+
+	public void setAlkohol(Czestosc alkohol) {
+		this.alkohol = alkohol;
+	}
+	
 	
 	
 }

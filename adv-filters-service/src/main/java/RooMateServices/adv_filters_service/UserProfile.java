@@ -11,9 +11,10 @@ public class UserProfile {
 	private String email;
 	private String nationality;
 	private String plec;
+	private String aboutMe;
 	
 	public UserProfile(int id, String name, String surname, int age, int phone, String address, String email,
-			String nationality, String plec) {
+			String nationality, String plec, String aboutMe) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -24,6 +25,7 @@ public class UserProfile {
 		this.email = email;
 		this.nationality = nationality;
 		this.plec = plec;
+		this.aboutMe = aboutMe;
 	}
 
 	public int getId() {
@@ -96,6 +98,14 @@ public class UserProfile {
 
 	public void setPlec(String plec) {
 		this.plec = plec;
+	}
+
+	public String getAboutMe() {
+		return aboutMe;
+	}
+
+	public void setAboutMe(String aboutMe) {
+		this.aboutMe = aboutMe;
 	}
 	
 	
